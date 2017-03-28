@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pipedrive FE test task</title>
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<header class="clearfix">
+
+		</header>
+		<div class="contentContainer clearfix">
+			<div class="leftbar">
+				<ul class="reset"></ul>
+			</div>
+			<div class="rightbar">
+				<div class="personData">
+				</div>
+				<div class="activities"></div>
+			</div>
+		</div>
+
+		<script type="text/template" id="headerTemplate">
+			<div class="headerLeft">
+				<div class="logo">
+					<a href="#" title="Pipedrive">
+						<img src="gfx/logo.png" alt="Pipedrive">
+					</a>
+				</div>
+				<a href="#" class="dealsTrigger">Deals</a>
+				<a href="#" class="activitiesTrigger">
+					<span class="notificationBox">
+						20
+						<span class="notification">17</span>
+					</span>
+					<span class="title">Activities</span>
+				</a>
+				<a href="#" class="userIcon"></a>
+				<a href="#" class="cube"></a>
+			</div>
+			<div class="userInfoBox">
+				<div class="avatar" style="background-image: url(gfx/avatar.jpg);"><img src="gfx/avatar.jpg" alt="kasutaja"></div>
+				<div class="userInfo">
+					<a href="#" role="button">
+						Tanel
+						<span>Firma</span>
+					</a>
+				</div>
+			</div>
+	    </script>
+
+		<script type="text/template" id="itemTemplate">
+			<% _.each(persons, function(person) {%>
+				<li data-url="/persons/<%= person.get('id')%>">
+					<%= person.get('first_name')%> <%= person.get('last_name')%>
+					<span><%= person.get('org_name')%></span>
+				</li>
+			<% }) %>
+	    </script>
+
+		<script type="text/template" id="personTemplate">
+			<div class="infoHeader">
+				<h2><%= person.get('first_name')%> <%= person.get('last_name')%></h2>
+				<div class="label">Deals</div>
+			</div>
+			<div class="detailsContainer">
+				<div class="box">
+					<table class="personalData">
+						<tr>
+							<th>Phone</th>
+							<td><%= person.get('phone')[0].value%></td>
+						</tr>
+						<tr>
+							<th>E-mail</th>
+							<td><%= person.get('email')[0].value%></td>
+						</tr>
+						<tr>
+							<th>Added</th>
+							<td><%= moment(person.get('add_time')).format("MMMM DD, Y")%></td>
+						</tr>
+						<tr>
+							<th>Open deals</th>
+							<td><%= person.get('open_deals_count')%></td>
+						</tr>
+						<tr>
+							<th>Next activity</th>
+							<td>
+								<% if (person.get('next_activity_date')) {%>
+									<span class="activityType"><%= nextActivity.get('type') %></span>, <%= moment(person.get('next_activity_date')).add(1, 'days').calendar() %>
+								<%} else { %>
+									none
+								<% } %>
+
+							 </td>
+						</tr>
+						<tr>
+							<th>Last activity</th>
+							<td>
+								<% if (person.get('last_activity_date')) {%>
+									<span class="activityType"><%= nextActivity.get('type') %></span>, <%= moment(person.get('last_activity_date')).subtract(1, 'days').calendar()%>
+								<%} else { %>
+									none
+								<% } %>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="box dealsDatabox">
+				</div>
+			</div>
+	    </script>
+		<script type="text/template" id="dealsTemplate">
+			<table class="dealsData">
+				<tr>
+					<th>Title</th>
+					<th>Sum</th>
+				</tr>
+				<% if (deals.length) {%>
+					<% _.each(deals, function(deal) {%>
+						<tr>
+							<td><%= deal.get('title')%></td>
+							<td><%= deal.get('value')%> <%= deal.get('currency')%></td>
+						</tr>
+					<% }) %>
+				<% } else {%>
+					<tr>
+						<td colspan="2">no deals</td>
+					</tr>
+				<% }%>
+			</table>
+		</script>
+		<script src="js/libs/moment.min.js"></script>
+		<script data-main="js/main.js" src="js/libs/require.js"></script>
+		<script>
+			require(['main'], function(){
+
+			});
+		</script>
+	</body>
+</html>

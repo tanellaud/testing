@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+html {overflow-y: scroll; height: 100%;}
+body {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Arimo', sans-serif;
+	background: url(../gfx/pattern.png) 0 0;
+	height: 100%;
+}
+body.mce-content-body {
+	background: #fff;
+}
+img {
+	border: 0;
+	vertical-align: middle;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	resize: vertical;
+}
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+p,
+pre {
+margin: 0;
+	padding: 0;
+}
+header,
+section,
+footer,
+article {
+	display: block;
+}
+/* Custom styles
+-------------------------------------------------------- */
+header {
+	background-color: #343434;
+	padding: 7px 13px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #0f0f0f;
+}
+header .headerLeft {
+	float: left;
+	font-size: 0;
+}
+header .logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 23px;
+}
+header .logo img {
+	width: 100px;
+}
+header .headerLeft a {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+	margin-right: 28px;
+}
+header .headerLeft a:hover {
+	text-decoration: none;
+}
+header .headerLeft a.dealsTrigger {
+	padding: 9px 0 9px 43px;
+	line-height: 1em;
+	background: url(../gfx/icon.deals.png) 0 center no-repeat;
+	position: relative;
+}
+header .headerLeft a.activitiesTrigger {
+	font-size: 0;
+}
+header .headerLeft a.activitiesTrigger span {
+	display: inline-block;
+	vertical-align: middle;
+}
+header .headerLeft a.activitiesTrigger .notificationBox {
+	width: 32px;
+	height: 34px;
+	background: url(../gfx/icon.nr.bg.png) center center no-repeat;
+	position: relative;
+	font-size: 15px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+	color: #444444;
+	font-weight: 700;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10px;
+	line-height: 1em;
+}
+header .headerLeft a.userIcon {
+	width: 32px;
+	height: 32px;
+	background: url(../gfx/icon.person.png) center center no-repeat;
+}
+header .headerLeft a.cube {
+	width: 26px;
+	height: 32px;
+	background: url(../gfx/icon.cube.png) center center no-repeat;
+}
+header .headerLeft a.activitiesTrigger .notificationBox .notification {
+	position: absolute;
+	color: #fff;
+	font-size: 9px;
+	font-weight: 700;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.44);
+	background-color: #dd0000;
+	border-radius: 2px;
+	display: block;
+	padding: 3px 4px;
+	top: -4px;
+	right: -2px;
+	line-height: 1em;
+}
+header .userInfoBox {
+	float: right;
+	font-size: 0;
+}
+header .userInfoBox .avatar {
+	display: inline-block;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+}
+header .userInfoBox .avatar img {
+	width: 0;
+	height: 0;
+}
+header .userInfoBox .userInfo {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #fff;
+}
+header .userInfoBox .userInfo a {
+	color: #fff;
+	font-weight: 400;
+	display: inline-block;
+	line-height: 1em;
+	background: url(../gfx/arrow.down.png) 100% center no-repeat;
+	padding: 0 14px 0 0;
+}
+header .userInfoBox .userInfo a:hover {
+	text-decoration: none;
+}
+header .userInfoBox .userInfo span {
+	color: #b2b2b2;
+	font-size: 11px;
+	display: block;
+}
+.contentContainer {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	align-items: stretch;
+	width: 100%;
+	font-size: 0;
+	height: 100%;
+}
+.contentContainer .leftbar {
+	width: 24%;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.contentContainer .leftbar li {
+	background: #ffffff;
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 100%, #207cca 100%, #1e5799 100%);
+	background-image: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 100%,#207cca 100%,#1e5799 100%);
+	background-image: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 100%,#207cca 100%,#1e5799 100%);
+	border-bottom: 1px solid #d6d6d6;
+	display: block;
+	color: #000;
+	font-weight: 700;
+	padding: 11px 13px;
+	line-height: 1em;
+	cursor: pointer;
+}
+.contentContainer .leftbar li:hover,
+.contentContainer .leftbar li.active {
+	background: #55a9e0;
+	background-image: -moz-linear-gradient(top, #55a9e0 -1%, #207cca 0%, #f6f6f6 0%, #55a9e0 0%, #55a9e0 5%, #3280c6 100%);
+	background-image: -webkit-linear-gradient(top, #55a9e0 -1%,#207cca 0%,#f6f6f6 0%,#55a9e0 0%,#55a9e0 5%,#3280c6 100%);
+	background-image: linear-gradient(to bottom, #55a9e0 -1%,#207cca 0%,#f6f6f6 0%,#55a9e0 0%,#55a9e0 5%,#3280c6 100%);
+}
+.contentContainer .leftbar li a {
+
+}
+.contentContainer .leftbar li.active,
+.contentContainer .leftbar li.active span {
+	color: #fff;
+}
+.contentContainer .leftbar li span {
+	display: block;
+	color: #666666;
+	font-size: 12px;
+	font-weight: 500;
+	padding-top: 10px;
+}
+.contentContainer .leftbar li:hover,
+.contentContainer .leftbar li:hover span {
+	text-decoration: none;
+	color: #fff;
+}
+.contentContainer .rightbar {
+	width: 76%;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	background: url(../gfx/pipe.watermark.png) center center no-repeat;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 20px 2%;
+}
+.contentContainer .rightbar .infoHeader {
+	font-size: 0;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 20px;
+}
+.contentContainer .rightbar .infoHeader h2 {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	font-size: 24px;
+	color: #000;
+}
+.contentContainer .rightbar .infoHeader .label {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	font-size: 18px;
+}
+.contentContainer .rightbar .detailsContainer {
+	background-color: #fff;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+	border-radius: 2px;
+	padding: 17px;
+	font-size: 0;
+}
+.contentContainer .rightbar .detailsContainer .box {
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+.contentContainer .rightbar .detailsContainer table.personalData {
+	width: 100%;
+	border-collapse: collapse;
+}
+.contentContainer .rightbar .detailsContainer table.personalData th {
+	text-align: left;
+	line-height: 1.2em;
+	padding: 6px 30px 6px 0;
+	width: 25%;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData {
+	width: 100%;
+	border-spacing: 0;
+	border: 1px solid #aaaaaa;
+	background-color: #fff;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+	font-weight: 700;
+	color: #525252;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData th {
+	font-weight: 700;
+	color: #525252;
+	text-align: left;
+	width: 50%;
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 100%, #207cca 100%, #1e5799 100%);
+	background-image: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 100%,#207cca 100%,#1e5799 100%);
+	background-image: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 100%,#207cca 100%,#1e5799 100%);
+	border-bottom: 1px solid #d6d6d6;
+	border-radius: 10px 0 0 0;
+	padding: 7px 11px;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData th:nth-child(even) {
+	text-align: right;
+	border-radius: 0 10px 0 0;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData td {
+	font-weight: 700;
+	color: #525252;
+	text-align: left;
+	width: 50%;
+	padding: 7px 11px;
+	border-bottom: 1px solid #d6d6d6;
+}
+.contentContainer .rightbar .detailsContainer table.personalData td .activityType {
+	text-transform: capitalize;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData tr:nth-child(odd) td {
+	background-image: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 100%, #207cca 100%, #1e5799 100%);
+	background-image: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 100%,#207cca 100%,#1e5799 100%);
+	background-image: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 100%,#207cca 100%,#1e5799 100%);
+}
+.contentContainer .rightbar .detailsContainer table.dealsData tr:last-child td {
+	border-bottom: 0;
+	border-radius: 0 0 0 10px;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData tr:last-child td:nth-child(even) {
+	border-bottom: 0;
+	border-radius: 0 0 10px 0;
+}
+.contentContainer .rightbar .detailsContainer table.dealsData td:nth-child(even) {
+	text-align: right;
+}
+/* Custom styles
+-------------------------------------------------------- */
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+.reset {
+	padding: 0;
+	margin: 0;
+}
+ul.reset li {
+	list-style: none;
+}
+#todo-list input.edit {
+  display: none; /* Hides input box*/
+}
+#todo-list .editing label {
+  display: none; /* Hides label text when .editing*/
+}
+#todo-list .editing input.edit {
+  display: inline; /* Shows input text box when .editing*/
+}
